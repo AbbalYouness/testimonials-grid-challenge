@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  font-size: 81.25%;
+  line-height: 1.4em;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: var(--light-grayish-blue);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--light-grayish-blue);
+}
+
+.white-background {
+  background: var(--white);
+  color: var(--very-dark-grayish-blue);
+}
+
+.violet-background {
+  background-image: url("../assets/bg-pattern-quotation.svg");
+  background-color: var(--moderate-violet);
+  background-repeat: no-repeat;
+  background-position: right 15% top 0;
+}
+
+.gray-background {
+  background: var(--very-dark-grayish-blue);
+}
+
+.blackish-background {
+  background: var(--very-dark-blackish-blue);
+}
+
+.grid-container {
+  margin: 2rem;
+  width: 1110px;
+  min-height: 550px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px 35px;
+  grid-template-areas:
+    "grid-daniel grid-daniel grid-jonathan grid-kira"
+    "grid-jeanette grid-patrick grid-patrick grid-kira";
+}
+
+.grid-item {
+  border-radius: 0.8rem;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 2rem;
+  box-shadow: 10px 10px 15px -15px var(--very-dark-grayish-blue);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+.grid-name-daniel {
+  grid-area: grid-daniel;
+}
+.grid-name-jeanette {
+  grid-area: grid-jeanette;
+}
+.grid-name-jonathan {
+  grid-area: grid-jonathan;
+}
+.grid-name-kira {
+  grid-area: grid-kira;
+}
+.grid-name-patrick {
+  grid-area: grid-patrick;
+}
+
+.item-profile {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.profile-img {
+  height: 2.5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  border: 2px solid var(--moderate-violet);
+}
+
+.profile-desc {
+  line-height: 1.2rem;
+}
+
+.profile-job {
+  font-size: 0.9rem;
+  opacity: 50%;
+}
+
+.text-message {
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1.7rem;
+  margin: 1em 0;
+}
+
+.text-quote {
+  opacity: 70%;
+}

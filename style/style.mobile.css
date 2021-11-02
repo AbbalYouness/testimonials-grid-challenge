@@ -1,0 +1,23 @@
+@media only screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "grid-daniel grid-daniel grid-jonathan"
+      "grid-jeanette grid-patrick grid-patrick"
+      "grid-kira grid-kira grid-kira";
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "grid-daniel"
+      "grid-jonathan"
+      "grid-jeanette"
+      "grid-patrick"
+      "grid-kira";
+  }
+}
